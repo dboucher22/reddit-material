@@ -1,4 +1,5 @@
 .main-toolbar {
+    a,
     button {
         min-width: initial;
     }
@@ -61,6 +62,7 @@ a.menu-item.mat-menu-item {
 .toolbar-heading {
     margin: 0 10px 0 5px;
     h5 {
+        padding-top: 2px!important;
         font-size: 22px!important;
     }
 }
