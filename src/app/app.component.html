@@ -1,17 +1,22 @@
 <mat-sidenav-container class="container">
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" class="main-toolbar">
         <mat-toolbar-row>
-            <button class="sidenav-menu-button" type="button" mat-button (click)="sidenav.open()">
+            <button class="sidenav-toggle-button" type="button" mat-button (click)="sidenav.open()">
                 <mat-icon>menu</mat-icon>
             </button>
             <a class="toolbar-heading" mat-button>
-                <h6>Reddit Material</h6>
+                <h5>Reddit Material</h5>
             </a>
-            <a class="toolbar-menu-item" type="button" mat-button>Hot</a>
-            <a class="toolbar-menu-item" type="button" mat-button>New</a>
-            <a class="toolbar-menu-item" type="button" mat-button>Rising</a>
-            <a class="toolbar-menu-item" type="button" mat-button>Controversial</a>
-            <a class="toolbar-menu-item" type="button" mat-button>Top</a>
+            <a class="toolbar-menu-item" type="button" mat-button>
+                <mat-icon>whatshot</mat-icon> Hot</a>
+            <a class="toolbar-menu-item" type="button" mat-button>
+                <mat-icon>new_releases</mat-icon> New</a>
+            <a class="toolbar-menu-item" type="button" mat-button>
+                <mat-icon>trending_up</mat-icon> Rising</a>
+            <a class="toolbar-menu-item" type="button" mat-button>
+                <mat-icon>thumbs_up_down</mat-icon> Controversial</a>
+            <a class="toolbar-menu-item" type="button" mat-button>
+                <mat-icon>thumb_up</mat-icon> Top</a>
             <a class="toolbar-menu-item" type="button" mat-button>Gilded</a>
             <a class="toolbar-menu-item" type="button" mat-button>Wiki</a>
             <span class="spacer"></span>
@@ -32,6 +37,17 @@
         </mat-toolbar-row>
     </mat-toolbar>
     <mat-sidenav #sidenav class="sidenav">
-        <h6>My Subreddits</h6>
+        <div class="sidenav-heading">
+            <h6>Subreddits</h6>
+            <span class="spacer"></span>
+            <a mat-button>Manage</a>
+        </div>
+        <mat-list>
+            <mat-list-item *ngFor="let item of subreddits">
+                <a class="sidenav-menu-item" mat-button>
+                    r/{{item.name}}
+                </a>
+            </mat-list-item>
+        </mat-list>
     </mat-sidenav>
 </mat-sidenav-container>

@@ -1,3 +1,15 @@
+.main-toolbar {
+    button {
+        min-width: initial;
+    }
+}
+
+a.menu-item.mat-menu-item {
+    font-size: 14px!important;
+    line-height: 38px;
+    height: initial;
+}
+
 .icon {
     padding: 0 14px;
 }
@@ -6,7 +18,7 @@
     flex: 1 1 auto;
 }
 
-.sidenav-menu-button {
+.sidenav-toggle-button {
     min-width: initial;
     padding: 0 8px;
     line-height: initial;
@@ -24,12 +36,33 @@
 }
 
 .sidenav {
-    padding: 20px;
-    min-width: 280px;
+    padding: 15px;
+    min-width: 280px!important;
+    .sidenav-heading {
+        display: flex;
+        flex: 1 1 auto;
+        h6 {
+            margin: 0;
+            padding-top: 7px;
+        }
+    }
+    mat-list-item {
+        height: initial!important;
+        .mat-list-item-content {
+            padding: 0!important;
+        }
+        a.sidenav-menu-item {
+            min-width: 100%!important;
+            text-align: left;
+        }
+    }
 }
 
 .toolbar-heading {
     margin: 0 10px 0 5px;
+    h5 {
+        font-size: 22px!important;
+    }
 }
 
 .toolbar-menu-item {
@@ -38,5 +71,5 @@
 }
 
 .menu-item {
-    padding-right: 50px;
+    padding-right: 50px!important;
 }
