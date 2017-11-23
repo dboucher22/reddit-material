@@ -5,3 +5,38 @@
 .spacer {
     flex: 1 1 auto;
 }
+
+.sidenav-menu-button {
+    min-width: initial;
+    padding: 0 8px;
+    line-height: initial;
+}
+
+.container {
+    height: 100%;
+}
+
+.sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidenav {
+    padding: 20px;
+    min-width: 280px;
+}
+
+.toolbar-heading {
+    margin: 0 10px 0 5px;
+}
+
+.toolbar-menu-item {
+    min-width: initial;
+    text-transform: uppercase;
+}
+
+.menu-item {
+    padding-right: 50px;
+}
