@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="main-toolbar">
+    <mat-toolbar-row class="main-toolbar-primary-row">
+        <a class="main-toolbar-heading" mat-button>
+            <h5>Reddit Material</h5>
+        </a>
+        <!-- TODO: ADD SITE SEARCH -->
+        <!-- <span class="spacer"></span>
+        <form class="main-toolbar-search-form">
+            <mat-form-field class="full-width">
+                <input class="main-toolbar-search-box" placeholder="Search" matInput>
+            </mat-form-field>
+        </form> -->
+        <ng-content></ng-content>
+        <span class="spacer"></span>
+        <button class="toolbar-menu-item" type="button" mat-button [matMenuTriggerFor]="appMenu">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #appMenu>
+            <a mat-menu-item class="menu-item">
+                <mat-icon>account_circle</mat-icon> Profile</a>
+            <a mat-menu-item class="menu-item">
+                <mat-icon>email</mat-icon> Inbox</a>
+            <a mat-menu-item class="menu-item">
+                <mat-icon>settings</mat-icon> Preferences</a>
+            <hr>
+            <a mat-menu-item class="menu-item">
+                <mat-icon>power_settings_new</mat-icon> Log out</a>
+        </mat-menu>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="main-toolbar-secondary-row">
+        <a class="toolbar-menu-item" type="button" mat-button>Hot</a>
+        <a class="toolbar-menu-item" type="button" mat-button>New</a>
+        <a class="toolbar-menu-item" type="button" mat-button>Rising</a>
+        <a class="toolbar-menu-item" type="button" mat-button>Controversial</a>
+        <a class="toolbar-menu-item" type="button" mat-button>Top</a>
+        <a class="toolbar-menu-item" type="button" mat-button>Gilded</a>
+        <a class="toolbar-menu-item" type="button" mat-button>Wiki</a>
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,23 @@
+.sidenav {
+    padding: 10px;
+    min-width: 280px!important;
+    .sidenav-heading {
+        display: flex;
+        flex: 1 1 auto;
+        h5 {
+            margin: 0;
+            padding-top: 6px;
+        }
+    }
+    mat-list-item {
+        height: initial!important;
+        a.sidenav-menu-item {
+            min-width: 100%!important;
+            text-align: left;
+        }
+    }
+}
+
+div.mat-list-item-content {
+    padding: 0!important;
+}

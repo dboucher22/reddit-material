@@ -1,48 +1,13 @@
 <mat-sidenav-container class="container">
-    <mat-toolbar color="primary" class="main-toolbar">
-        <mat-toolbar-row>
-            <button class="sidenav-toggle-button" type="button" mat-button (click)="sidenav.open()">
-                <mat-icon>menu</mat-icon>
-            </button>
-            <a class="toolbar-heading" mat-button>
-                <h5>Reddit Material</h5>
-            </a>
-            <a class="toolbar-menu-item" type="button" mat-button>Hot</a>
-            <a class="toolbar-menu-item" type="button" mat-button>New</a>
-            <a class="toolbar-menu-item" type="button" mat-button>Rising</a>
-            <a class="toolbar-menu-item" type="button" mat-button>Controversial</a>
-            <a class="toolbar-menu-item" type="button" mat-button>Top</a>
-            <a class="toolbar-menu-item" type="button" mat-button>Gilded</a>
-            <a class="toolbar-menu-item" type="button" mat-button>Wiki</a>
-            <span class="spacer"></span>
-            <button class="toolbar-menu-item" type="button" mat-button [matMenuTriggerFor]="appMenu">
-                <mat-icon>account_circle</mat-icon>
-            </button>
-            <mat-menu #appMenu>
-                <a mat-menu-item class="menu-item">
-                    <mat-icon>account_circle</mat-icon> Profile</a>
-                <a mat-menu-item class="menu-item">
-                    <mat-icon>email</mat-icon> Inbox</a>
-                <a mat-menu-item class="menu-item">
-                    <mat-icon>settings</mat-icon> Preferences</a>
-                <hr>
-                <a mat-menu-item class="menu-item">
-                    <mat-icon>power_settings_new</mat-icon> Log out</a>
-            </mat-menu>
-        </mat-toolbar-row>
-    </mat-toolbar>
-    <mat-sidenav #sidenav class="sidenav">
-        <div class="sidenav-heading">
-            <h6>Subreddits</h6>
-            <span class="spacer"></span>
-            <a mat-button>Manage</a>
-        </div>
-        <mat-list>
-            <mat-list-item *ngFor="let item of subreddits">
-                <a class="sidenav-menu-item" mat-button>
-                    r/{{item.name}}
-                </a>
-            </mat-list-item>
-        </mat-list>
+    <app-toolbar>
+        <button class="sidenav-toggle-button subreddit-menu-button" type="button" mat-button (click)="sidenav.open()">
+            <mat-icon>menu</mat-icon> Subreddits
+        </button>
+    </app-toolbar>
+    <mat-sidenav #sidenav class="sidenav" position="start">
+        <app-sidenav></app-sidenav>
     </mat-sidenav>
+    <div class="main-outlet">
+        <router-outlet></router-outlet>
+    </div>
 </mat-sidenav-container>

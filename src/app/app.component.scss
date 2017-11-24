@@ -1,22 +1,13 @@
-.main-toolbar {
-    a,
-    button {
-        min-width: initial;
-    }
-}
-
-a.menu-item.mat-menu-item {
-    font-size: 14px!important;
-    line-height: 38px;
-    height: initial;
-}
-
 .icon {
     padding: 0 14px;
 }
 
-.spacer {
-    flex: 1 1 auto;
+.container {
+    height: 100%;
+}
+
+.main-outlet {
+    padding: 10px;
 }
 
 .sidenav-toggle-button {
@@ -25,53 +16,9 @@ a.menu-item.mat-menu-item {
     line-height: initial;
 }
 
-.container {
-    height: 100%;
-}
-
-.sidenav-content {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.sidenav {
-    padding: 15px;
-    min-width: 280px!important;
-    .sidenav-heading {
-        display: flex;
-        flex: 1 1 auto;
-        h6 {
-            margin: 0;
-            padding-top: 7px;
-        }
+.subreddit-menu-button {
+    padding-top: 1px!important;
+    mat-icon {
+        padding-bottom: 2px!important;
     }
-    mat-list-item {
-        height: initial!important;
-        .mat-list-item-content {
-            padding: 0!important;
-        }
-        a.sidenav-menu-item {
-            min-width: 100%!important;
-            text-align: left;
-        }
-    }
-}
-
-.toolbar-heading {
-    margin: 0 10px 0 5px;
-    h5 {
-        padding-top: 2px!important;
-        font-size: 22px!important;
-    }
-}
-
-.toolbar-menu-item {
-    min-width: initial;
-    text-transform: uppercase;
-}
-
-.menu-item {
-    padding-right: 50px!important;
 }

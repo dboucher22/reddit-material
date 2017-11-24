@@ -1,0 +1,21 @@
+<div class="sidenav">
+    <div class="sidenav-heading">
+        <h5>Subreddits</h5>
+        <span class="spacer"></span>
+        <a mat-button color="accent">Manage</a>
+    </div>
+    <mat-list>
+        <mat-list-item *ngFor="let item of subreddits">
+            <ng-container *ngIf="[6,7,8].indexOf(item.id) > -1; else showOriginal">
+                <a href="https://www.reddit.com/r/{{item.name}}" class="sidenav-menu-item" target="_blank" mat-button>
+                    r/{{item.name}}
+                </a>
+            </ng-container>
+            <ng-template #showOriginal>
+                <a class="sidenav-menu-item" mat-button>
+                    r/{{item.name}}
+                </a>
+            </ng-template>
+        </mat-list-item>
+    </mat-list>
+</div>
