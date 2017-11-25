@@ -4,7 +4,7 @@
     </mat-sidenav>
     <div class="main-wrapper">
         <app-toolbar [loggedIn]="loggedIn" (login)="login($event)" (logout)="logout($event)">
-            <button mat-button class="sidenav-toggle-button icon-button" type="button" (click)="sidenav.open()">
+            <button mat-button class="sidenav-toggle-button" type="button" (click)="sidenav.open()">
                 <mat-icon>menu</mat-icon> Communities
             </button>
         </app-toolbar>
@@ -13,9 +13,8 @@
         </main>
         <footer>
             <span>&copy; 2017 Reddit. All rights reserved.</span>
-            <a mat-button color="accent">Help</a>
             <a mat-button color="accent">About</a>
-            <a mat-button color="accent">Contact Us</a>
+            <a mat-button color="accent">Support</a>
             <a mat-button color="accent">Terms</a>
             <a mat-button color="accent">Privacy</a>
             <a mat-button color="accent">Developers</a>

@@ -4,11 +4,13 @@
             <h5>
                 <mat-icon>adb</mat-icon> Reddit</h5>
         </a>
-        <!-- TODO: Add site search -->
-        <span class="spacer"></span>
+        <form class="main-toolbar-search">
+            <input type="search" name="search" placeholder="Search...">
+        </form>
+        <!-- <span class="spacer"></span> -->
         <ng-container *ngIf="inboxVisible && loggedIn">
-            <a mat-button class="toolbar-menu-item icon-button" (click)="inboxVisible = false;">
-                <mat-icon color="accent">email</mat-icon>
+            <a mat-button class="toolbar-menu-item" (click)="inboxVisible = false;">
+                <mat-icon>email</mat-icon>
                 <span>4</span>
             </a>
         </ng-container>
@@ -36,12 +38,11 @@
     <mat-toolbar-row class="main-toolbar-secondary-row">
         <!-- Communities sidenav toggle button placeholder (<ng-content>) -->
         <ng-content></ng-content>
-        <a class="toolbar-menu-item" type="button" mat-button>Hot</a>
-        <a class="toolbar-menu-item" type="button" mat-button>New</a>
-        <a class="toolbar-menu-item" type="button" mat-button>Rising</a>
-        <a class="toolbar-menu-item" type="button" mat-button>Controversial</a>
-        <a class="toolbar-menu-item" type="button" mat-button>Top</a>
-        <a class="toolbar-menu-item" type="button" mat-button>Gilded</a>
-        <a class="toolbar-menu-item" type="button" mat-button>Wiki</a>
+        <a mat-button class="toolbar-menu-item">Hot</a>
+        <a mat-button class="toolbar-menu-item">New</a>
+        <a mat-button class="toolbar-menu-item">Controversial</a>
+        <a mat-button class="toolbar-menu-item">Rising</a>
+        <a mat-button class="toolbar-menu-item">Top</a>
+        <a mat-button class="toolbar-menu-item" *ngIf="loggedIn">NSFW</a>
     </mat-toolbar-row>
 </mat-toolbar>
