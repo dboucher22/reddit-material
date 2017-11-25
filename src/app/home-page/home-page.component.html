@@ -1,1 +1,10 @@
-
+<div class="home-page">
+    <mat-card *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">
+        <mat-card-title>Simple title {{i+1}}</mat-card-title>
+        <mat-card-content>Simple content {{i+1}}</mat-card-content>
+        <mat-card-actions>
+            <button mat-button color="accent">{{i*3+1}} comment{{i+1 === 1 ? '' : 's'}}</button>
+            <button mat-button color="accent">Another action {{i+1}}</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

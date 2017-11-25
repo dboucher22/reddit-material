@@ -15,34 +15,6 @@
         flex: 1;
         padding-left: 25px;
         padding-right: 35px;
-        input[type=search] {
-            width: 100%;
-            padding: 9px 15px;
-            border: none;
-            font-size: 15px;
-            border: 1px solid rgba(0, 0, 0, 0.15);
-            background-color: rgba(0, 0, 0, 0.1);
-            color: #fff;
-            outline: none;
-        }
-        input[type=search]:hover {
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-        input[type=search]:focus {
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-         ::-webkit-input-placeholder {
-            color: #ccc;
-        }
-         ::-moz-placeholder {
-            color: #ccc;
-        }
-         :-ms-input-placeholder {
-            color: #ccc;
-        }
-         :-moz-placeholder {
-            color: #ccc;
-        }
     }
     .mat-input-flex {
         width: 300px!important;
@@ -53,6 +25,11 @@
         background-color: #2a2a2a; // flex-flow: wrap;
         padding-left: 5px;
         padding-right: 5px;
+        display: flex;
+        overflow: hidden;
+        .toolbar-menu-item {
+            flex: 1;
+        }
     }
     .toolbar-menu-item {
         min-width: initial; // text-transform: uppercase;

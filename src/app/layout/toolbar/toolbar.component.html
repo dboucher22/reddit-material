@@ -1,12 +1,12 @@
 <mat-toolbar color="primary" class="main-toolbar">
     <mat-toolbar-row class="main-toolbar-primary-row">
-        <a class="main-toolbar-heading" mat-button>
+        <a mat-button class="main-toolbar-heading">
             <h5>
                 <mat-icon>adb</mat-icon> Reddit</h5>
         </a>
-        <form class="main-toolbar-search">
-            <input type="search" name="search" placeholder="Search...">
-        </form>
+        <div class="main-toolbar-search">
+            <app-search></app-search>
+        </div>
         <!-- <span class="spacer"></span> -->
         <ng-container *ngIf="inboxVisible && loggedIn">
             <a mat-button class="toolbar-menu-item" (click)="inboxVisible = false;">
@@ -44,5 +44,6 @@
         <a mat-button class="toolbar-menu-item">Rising</a>
         <a mat-button class="toolbar-menu-item">Top</a>
         <a mat-button class="toolbar-menu-item" *ngIf="loggedIn">NSFW</a>
+        <span class="spacer"></span>
     </mat-toolbar-row>
 </mat-toolbar>
