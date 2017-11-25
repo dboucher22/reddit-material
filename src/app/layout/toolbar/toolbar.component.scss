@@ -21,13 +21,13 @@
         background-color: #2a2a2a; // flex-flow: wrap;
     }
     .toolbar-menu-item {
-        min-width: initial;
-        text-transform: uppercase;
+        min-width: initial; // text-transform: uppercase;
     }
 }
 
 a.main-toolbar-heading {
-    padding-top: 1px;
+    padding-top: 0;
+    padding-bottom: 1px;
     padding-left: 6px;
     padding-right: 6px;
     margin-right: 10px;

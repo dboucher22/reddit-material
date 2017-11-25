@@ -1,5 +1,6 @@
 .sidenav {
     margin: 10px;
+    max-width: 280px!important;
     min-width: 280px!important;
     .sidenav-heading {
         display: flex;
@@ -23,8 +24,19 @@
     }
     .sidenav-logged-out-content {
         display: flex;
+        flex-direction: column;
         align-items: center;
         padding-top: 10px;
+        small {
+            line-height: 20px;
+            padding: 10px;
+        }
+        button {
+            text-align: left;
+        }
+    }
+    .sidenav-popular-content {
+        padding-top: 20px;
     }
 }
 

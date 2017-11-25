@@ -1,7 +1,7 @@
 // @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 // @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
-// @import "~@angular/material/prebuilt-themes/purple-green.css";
+// @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import "~@angular/material/prebuilt-themes/purple-green.css";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 html,
 body {
@@ -22,8 +22,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    margin-bottom: 10px; // text-transform: uppercase;
     font-weight: normal;
 }
 

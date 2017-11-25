@@ -1,23 +1,36 @@
 <div class="sidenav">
     <div class="sidenav-heading">
-        <h5>Subreddits</h5>
+        <h5>Communities</h5>
         <span class="spacer"></span>
-        <a mat-button class="sidenav-settings-button" color="accent">
+        <a mat-button class="sidenav-settings-button" color="warn" *ngIf="loggedIn">
             <mat-icon>settings</mat-icon>
         </a>
     </div>
-    <ng-container *ngIf="loggedIn; else showLoggedOut">
+    <ng-container *ngIf="!(communities && communities.length) || loggedIn; else showLoggedOut">
         <mat-list>
-            <mat-list-item *ngFor="let subreddit of subreddits">
-                <a mat-button href="https://www.reddit.com/r/{{subreddit.name}}" class="sidenav-menu-item" target="_blank">
-                    {{subreddit.name}}
+            <mat-list-item *ngFor="let community of communities">
+                <a mat-button href="https://www.reddit.com/r/{{community.name}}" class="sidenav-menu-item" target="_blank">
+                    {{community.name}}
                 </a>
             </mat-list-item>
         </mat-list>
     </ng-container>
     <ng-template #showLoggedOut>
         <div class="sidenav-logged-out-content">
-            <button mat-button class="full-width" color="accent">Explore subreddits</button>
+            <small>
+                Communities you subscribe to appear in this list.
+            </small>
+            <button mat-raised-button class="full-width" color="warn">Explore Communities</button>
+        </div>
+        <div class="sidenav-popular-content">
+            <h5>Popular Communities</h5>
+            <mat-list>
+                <mat-list-item *ngFor="let community of popularCommunities">
+                    <a mat-button href="https://www.reddit.com/r/{{community.name}}" class="sidenav-menu-item" target="_blank">
+                        {{community.name}}
+                    </a>
+                </mat-list-item>
+            </mat-list>
         </div>
     </ng-template>
 </div>

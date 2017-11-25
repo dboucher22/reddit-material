@@ -1,7 +1,7 @@
 <mat-sidenav-container class="container">
     <app-toolbar [loggedIn]="loggedIn" (login)="login($event)" (logout)="logout($event)">
         <button mat-button class="sidenav-toggle-button icon-button" type="button" (click)="sidenav.open()">
-            <mat-icon>menu</mat-icon> Subreddits
+            <mat-icon>menu</mat-icon> Communities
         </button>
     </app-toolbar>
     <mat-sidenav id="sidenav" #sidenav position="start">

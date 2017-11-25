@@ -9,7 +9,7 @@ import { ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-    loggedIn = true;
+    loggedIn = false;
 
     login(loggedIn: boolean) {
         this.loggedIn = loggedIn;
