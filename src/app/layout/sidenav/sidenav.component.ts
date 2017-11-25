@@ -35,7 +35,6 @@ export class SidenavComponent implements OnInit {
         { id: 121, name: 'Unexpected' },
         { id: 8, name: 'WatchItForThePlot' }
     ];
-    popularCommunities = this.communities;
 
     constructor() { }
 

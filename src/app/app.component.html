@@ -1,13 +1,24 @@
 <mat-sidenav-container class="container">
-    <app-toolbar [loggedIn]="loggedIn" (login)="login($event)" (logout)="logout($event)">
-        <button mat-button class="sidenav-toggle-button icon-button" type="button" (click)="sidenav.open()">
-            <mat-icon>menu</mat-icon> Communities
-        </button>
-    </app-toolbar>
     <mat-sidenav id="sidenav" #sidenav position="start">
         <app-sidenav [loggedIn]="loggedIn"></app-sidenav>
     </mat-sidenav>
-    <div class="main-outlet">
-        <router-outlet></router-outlet>
+    <div class="main-wrapper">
+        <app-toolbar [loggedIn]="loggedIn" (login)="login($event)" (logout)="logout($event)">
+            <button mat-button class="sidenav-toggle-button icon-button" type="button" (click)="sidenav.open()">
+                <mat-icon>menu</mat-icon> Communities
+            </button>
+        </app-toolbar>
+        <main class="content">
+            <router-outlet></router-outlet>
+        </main>
+        <footer>
+            <span>&copy; 2017 Reddit. All rights reserved.</span>
+            <a mat-button color="accent">Help</a>
+            <a mat-button color="accent">About</a>
+            <a mat-button color="accent">Contact Us</a>
+            <a mat-button color="accent">Terms</a>
+            <a mat-button color="accent">Privacy</a>
+            <a mat-button color="accent">Developers</a>
+        </footer>
     </div>
 </mat-sidenav-container>

@@ -19,6 +19,8 @@
         height: 46px;
         border-bottom: 1px solid #222;
         background-color: #2a2a2a; // flex-flow: wrap;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .toolbar-menu-item {
         min-width: initial; // text-transform: uppercase;
@@ -34,6 +36,9 @@ a.main-toolbar-heading {
     h5 {
         padding-top: 2px!important;
         font-size: 22px!important;
+        mat-icon {
+            vertical-align: text-top;
+        }
     }
 }
 

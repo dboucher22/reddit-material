@@ -1,21 +1,19 @@
 <mat-toolbar color="primary" class="main-toolbar">
     <mat-toolbar-row class="main-toolbar-primary-row">
         <a class="main-toolbar-heading" mat-button>
-            <h5>Reddit</h5>
+            <h5>
+                <mat-icon>adb</mat-icon> Reddit</h5>
         </a>
         <!-- TODO: Add site search -->
-
-        <!-- Communities sidenav toggle button placeholder -->
-        <ng-content></ng-content>
-
         <span class="spacer"></span>
         <ng-container *ngIf="inboxVisible && loggedIn">
-            <a class="toolbar-menu-item icon-button" type="button" mat-button (click)="inboxVisible = false;">
-                <mat-icon>email</mat-icon> 4
+            <a mat-button class="toolbar-menu-item icon-button" (click)="inboxVisible = false;">
+                <mat-icon color="accent">email</mat-icon>
+                <span>4</span>
             </a>
         </ng-container>
         <ng-container *ngIf="loggedIn; else showLoggedOut">
-            <button class="toolbar-menu-item" type="button" mat-button [matMenuTriggerFor]="accountMenu">
+            <button mat-button class="toolbar-menu-item" type="button" [matMenuTriggerFor]="accountMenu">
                 <mat-icon>account_circle</mat-icon>
             </button>
             <mat-menu #accountMenu>
@@ -36,6 +34,8 @@
         </ng-template>
     </mat-toolbar-row>
     <mat-toolbar-row class="main-toolbar-secondary-row">
+        <!-- Communities sidenav toggle button placeholder (<ng-content>) -->
+        <ng-content></ng-content>
         <a class="toolbar-menu-item" type="button" mat-button>Hot</a>
         <a class="toolbar-menu-item" type="button" mat-button>New</a>
         <a class="toolbar-menu-item" type="button" mat-button>Rising</a>
