@@ -2,20 +2,22 @@
     <div class="sidenav-heading">
         <h5>Subreddits</h5>
         <span class="spacer"></span>
-        <a mat-button color="accent">Manage</a>
+        <a mat-button class="sidenav-settings-button" color="accent">
+            <mat-icon>settings</mat-icon>
+        </a>
     </div>
-    <mat-list>
-        <mat-list-item *ngFor="let item of subreddits">
-            <ng-container *ngIf="[6,7,8].indexOf(item.id) > -1; else showOriginal">
-                <a href="https://www.reddit.com/r/{{item.name}}" class="sidenav-menu-item" target="_blank" mat-button>
-                    r/{{item.name}}
+    <ng-container *ngIf="loggedIn; else showLoggedOut">
+        <mat-list>
+            <mat-list-item *ngFor="let subreddit of subreddits">
+                <a mat-button href="https://www.reddit.com/r/{{subreddit.name}}" class="sidenav-menu-item" target="_blank">
+                    {{subreddit.name}}
                 </a>
-            </ng-container>
-            <ng-template #showOriginal>
-                <a class="sidenav-menu-item" mat-button>
-                    r/{{item.name}}
-                </a>
-            </ng-template>
-        </mat-list-item>
-    </mat-list>
+            </mat-list-item>
+        </mat-list>
+    </ng-container>
+    <ng-template #showLoggedOut>
+        <div class="sidenav-logged-out-content">
+            <button mat-button class="full-width" color="accent">Explore subreddits</button>
+        </div>
+    </ng-template>
 </div>

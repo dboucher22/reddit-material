@@ -1,13 +1,18 @@
 .sidenav {
-    padding: 10px;
+    margin: 10px;
     min-width: 280px!important;
     .sidenav-heading {
         display: flex;
-        flex: 1 1 auto;
         h5 {
             margin: 0;
             padding-top: 6px;
         }
+    }
+    .sidenav-settings-button {
+        min-width: initial;
+    }
+    mat-list.matlist {
+        padding-top: 10px!important;
     }
     mat-list-item {
         height: initial!important;
@@ -15,6 +20,11 @@
             min-width: 100%!important;
             text-align: left;
         }
+    }
+    .sidenav-logged-out-content {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
     }
 }
 

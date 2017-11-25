@@ -1,31 +1,39 @@
 <mat-toolbar color="primary" class="main-toolbar">
     <mat-toolbar-row class="main-toolbar-primary-row">
         <a class="main-toolbar-heading" mat-button>
-            <h5>Reddit Material</h5>
+            <h5>Reddit</h5>
         </a>
-        <!-- TODO: ADD SITE SEARCH -->
-        <!-- <span class="spacer"></span>
-        <form class="main-toolbar-search-form">
-            <mat-form-field class="full-width">
-                <input class="main-toolbar-search-box" placeholder="Search" matInput>
-            </mat-form-field>
-        </form> -->
+        <!-- TODO: Add site search -->
+
+        <!-- Subreddit sidenav toggle button placeholder -->
         <ng-content></ng-content>
+
         <span class="spacer"></span>
-        <button class="toolbar-menu-item" type="button" mat-button [matMenuTriggerFor]="appMenu">
-            <mat-icon>account_circle</mat-icon>
-        </button>
-        <mat-menu #appMenu>
-            <a mat-menu-item class="menu-item">
-                <mat-icon>account_circle</mat-icon> Profile</a>
-            <a mat-menu-item class="menu-item">
-                <mat-icon>email</mat-icon> Inbox</a>
-            <a mat-menu-item class="menu-item">
-                <mat-icon>settings</mat-icon> Preferences</a>
-            <hr>
-            <a mat-menu-item class="menu-item">
-                <mat-icon>power_settings_new</mat-icon> Log out</a>
-        </mat-menu>
+        <ng-container *ngIf="inboxVisible && loggedIn">
+            <a class="toolbar-menu-item icon-button" type="button" mat-button (click)="inboxVisible = false;">
+                <mat-icon>email</mat-icon> 4
+            </a>
+        </ng-container>
+        <ng-container *ngIf="loggedIn; else showLoggedOut">
+            <button class="toolbar-menu-item" type="button" mat-button [matMenuTriggerFor]="accountMenu">
+                <mat-icon>account_circle</mat-icon>
+            </button>
+            <mat-menu #accountMenu>
+                <a mat-menu-item class="menu-item">
+                    <mat-icon>account_circle</mat-icon> Profile</a>
+                <a mat-menu-item class="menu-item">
+                    <mat-icon>email</mat-icon> Inbox</a>
+                <a mat-menu-item class="menu-item">
+                    <mat-icon>settings</mat-icon> Preferences</a>
+                <hr>
+                <a mat-menu-item class="menu-item" (click)="logOut()">
+                    <mat-icon>power_settings_new</mat-icon> Log out</a>
+            </mat-menu>
+        </ng-container>
+        <ng-template #showLoggedOut>
+            <button mat-raised-button color="primary" (click)="logIn()">
+                <mat-icon>input</mat-icon> Log In</button>
+        </ng-template>
     </mat-toolbar-row>
     <mat-toolbar-row class="main-toolbar-secondary-row">
         <a class="toolbar-menu-item" type="button" mat-button>Hot</a>

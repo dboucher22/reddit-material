@@ -3,9 +3,6 @@
     button {
         min-width: initial;
     }
-    .full-width {
-        width: 100%;
-    }
     .main-toolbar-search-form {
         padding-top: 8px;
         font-size: 16px!important;
@@ -19,7 +16,8 @@
         width: 300px!important;
     }
     .main-toolbar-secondary-row {
-        height: 37px;
+        height: 46px;
+        border-bottom: 1px solid #222;
         background-color: #2a2a2a; // flex-flow: wrap;
     }
     .toolbar-menu-item {

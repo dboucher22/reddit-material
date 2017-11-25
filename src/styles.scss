@@ -1,4 +1,7 @@
+// @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+// @import "~@angular/material/prebuilt-themes/purple-green.css";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 html,
 body {
@@ -58,6 +61,15 @@ hr {
     display: flex;
     flex-direction: column;
     padding: 5px;
+}
+
+.flex {
+    flex: 1;
+    flex-flow: wrap;
+}
+
+.full-width {
+    width: 100%;
 }
 
 .spacer {

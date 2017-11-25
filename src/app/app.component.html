@@ -1,11 +1,11 @@
 <mat-sidenav-container class="container">
-    <app-toolbar>
-        <button class="sidenav-toggle-button subreddit-menu-button" type="button" mat-button (click)="sidenav.open()">
+    <app-toolbar [loggedIn]="loggedIn" (login)="login($event)" (logout)="logout($event)">
+        <button mat-button class="sidenav-toggle-button icon-button" type="button" (click)="sidenav.open()">
             <mat-icon>menu</mat-icon> Subreddits
         </button>
     </app-toolbar>
-    <mat-sidenav #sidenav class="sidenav" position="start">
-        <app-sidenav></app-sidenav>
+    <mat-sidenav id="sidenav" #sidenav position="start">
+        <app-sidenav [loggedIn]="loggedIn"></app-sidenav>
     </mat-sidenav>
     <div class="main-outlet">
         <router-outlet></router-outlet>
