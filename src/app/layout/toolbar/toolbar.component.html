@@ -7,7 +7,6 @@
         <div class="main-toolbar-search">
             <app-search></app-search>
         </div>
-        <!-- <span class="spacer"></span> -->
         <ng-container *ngIf="inboxVisible && loggedIn">
             <a mat-button class="toolbar-menu-item" (click)="inboxVisible = false;">
                 <mat-icon>email</mat-icon>
@@ -36,14 +35,18 @@
         </ng-template>
     </mat-toolbar-row>
     <mat-toolbar-row class="main-toolbar-secondary-row">
-        <!-- Communities sidenav toggle button placeholder (<ng-content>) -->
-        <ng-content></ng-content>
-        <a mat-button class="toolbar-menu-item">Hot</a>
-        <a mat-button class="toolbar-menu-item">New</a>
-        <a mat-button class="toolbar-menu-item">Controversial</a>
-        <a mat-button class="toolbar-menu-item">Rising</a>
-        <a mat-button class="toolbar-menu-item">Top</a>
-        <a mat-button class="toolbar-menu-item" *ngIf="loggedIn">NSFW</a>
+        <span class="main-toolbar-content-placeholder">
+            <!-- Communities sidenav toggle button placeholder (<ng-content>) -->
+            <ng-content></ng-content>
+        </span>
+        <mat-tab-group>
+            <mat-tab label="Hot"></mat-tab>
+            <mat-tab label="New"></mat-tab>
+            <mat-tab label="Controversial"></mat-tab>
+            <mat-tab label="Rising"></mat-tab>
+            <mat-tab label="Top"></mat-tab>
+            <mat-tab *ngIf="loggedIn" label="NSFW"></mat-tab>
+        </mat-tab-group>
         <span class="spacer"></span>
     </mat-toolbar-row>
 </mat-toolbar>

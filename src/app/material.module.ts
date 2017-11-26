@@ -9,6 +9,7 @@ import {
     MatListModule,
     MatMenuModule,
     MatSidenavModule,
+    MatTabsModule,
     MatToolbarModule
 } from '@angular/material';
 
@@ -19,6 +20,7 @@ const materialImports = [
     MatInputModule,
     MatListModule,
     MatMenuModule,
+    MatTabsModule,
     MatToolbarModule,
     MatSidenavModule
 ];

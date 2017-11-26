@@ -1,6 +1,72 @@
 .home-page {
+    display: flex;
     margin: -10px;
-    mat-card {
-        margin: 10px;
+    .home-page-left-container {
+        flex: 1;
+        flex-basis: 75%;
+        mat-card {
+            margin: 15px;
+            padding: 15px;
+            mat-card-content {
+                display: flex;
+                flex-direction: row;
+                .card-avatar-wrapper {
+                    .card-avatar {
+                        height: 105px;
+                        width: 105px;
+                        background-size: cover;
+                        border-radius: 1%;
+                        cursor: pointer;
+                    }
+                }
+                .card-content {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+                    padding-left: 20px;
+                    .card-heading {
+                        flex: 1;
+                        color: #69f0ae;
+                        a {
+                            cursor: pointer;
+                        }
+                    }
+                    .card-details {
+                        margin-bottom: 15px;
+                        flex: 1;
+                        color: #ccc;
+                        a {
+                            color: #cd58ff;
+                            cursor: pointer;
+                        }
+                    }
+                    .card-actions {
+                        flex: 1;
+                        a,
+                        button {
+                            min-width: initial;
+                        }
+                        .card-comments-button {
+                            background: rgba(0, 0, 0, 0.15);
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .home-page-right-container {
+        flex: 1;
+        flex-basis: 25%;
+        margin-top: 15px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        mat-card {
+            padding: 15px;
+            img {
+                margin-bottom: -5px;
+                width: 100%;
+            }
+        }
     }
 }

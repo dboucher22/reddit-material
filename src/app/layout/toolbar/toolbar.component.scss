@@ -27,8 +27,14 @@
         padding-right: 5px;
         display: flex;
         overflow: hidden;
+        .main-toolbar-content-placeholder {
+            padding-right: 10px;
+        }
         .toolbar-menu-item {
             flex: 1;
+        }
+        .mat-tab-label {
+            min-width: initial;
         }
     }
     .toolbar-menu-item {
