@@ -3,7 +3,7 @@
         <app-sidenav [loggedIn]="loggedIn"></app-sidenav>
     </mat-sidenav>
     <div class="main-wrapper">
-        <app-toolbar [loggedIn]="loggedIn" (login)="login($event)" (logout)="logout($event)">
+        <app-toolbar>
             <button mat-button class="sidenav-toggle-button" type="button" (click)="sidenav.open()">
                 <mat-icon>menu</mat-icon> Communities
             </button>

@@ -1,25 +1,45 @@
 .login-page-wrapper {
     display: flex;
-    .login-form {
-        flex: 1;
-        min-width: 500px;
-        h5 {
+    mat-card {
+        max-width: 400px;
+        mat-card-title {
+            margin: -24px;
             margin-bottom: 20px;
-        }
-        .login-form-email {
-            margin-bottom: 10px;
-        }
-        .login-form-password {
-            margin-bottom: 10px;
-        }
-        .login-form-checkbox {
-            margin-bottom: 20px;
-        }
-        .login-form-actions {
-            display: flex;
-            button {
-                flex: 1;
+            padding: 25px 0;
+            h4 {
+                text-align: center;
+                margin-bottom: 0;
             }
+        }
+        .login-form {
+            flex: 1;
+            .login-form-email {
+                margin-bottom: 10px;
+            }
+            .login-form-password {
+                margin-bottom: 10px;
+            }
+            .login-form-options {
+                margin-bottom: 20px;
+                display: flex;
+                mat-checkbox {
+                    padding-top: 5px;
+                    flex: 1;
+                }
+                a {
+                    flex: 1;
+                    min-width: initial;
+                }
+            }
+            .login-form-actions {
+                display: flex;
+                button {
+                    flex: 1;
+                }
+            }
+        }
+        mat-card-footer {
+            padding: 20px;
         }
     }
 }

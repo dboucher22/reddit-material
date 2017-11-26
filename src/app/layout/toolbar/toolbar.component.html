@@ -7,13 +7,13 @@
         <div class="main-toolbar-search">
             <app-search></app-search>
         </div>
-        <ng-container *ngIf="inboxVisible && loggedIn">
+        <ng-container *ngIf="false">
             <a mat-button class="toolbar-menu-item" (click)="inboxVisible = false;">
                 <mat-icon>email</mat-icon>
                 <span>4</span>
             </a>
         </ng-container>
-        <ng-container *ngIf="loggedIn; else showLoggedOut">
+        <ng-container *ngIf="false; else showLoggedOut">
             <button mat-button class="toolbar-menu-item" type="button" [matMenuTriggerFor]="accountMenu">
                 <mat-icon>account_circle</mat-icon>
             </button>
@@ -25,13 +25,13 @@
                 <a mat-menu-item class="menu-item">
                     <mat-icon>settings</mat-icon> Preferences</a>
                 <hr>
-                <a mat-menu-item class="menu-item" (click)="logOut()">
+                <a mat-menu-item class="menu-item">
                     <mat-icon>power_settings_new</mat-icon> Log out</a>
             </mat-menu>
         </ng-container>
         <ng-template #showLoggedOut>
-            <button mat-raised-button color="primary" (click)="logIn()">
-                <mat-icon>input</mat-icon> Log In</button>
+            <a mat-raised-button color="primary" [routerLink]="['login']">
+                <mat-icon>input</mat-icon> Log In</a>
         </ng-template>
     </mat-toolbar-row>
     <mat-toolbar-row class="main-toolbar-secondary-row">
@@ -45,7 +45,7 @@
             <mat-tab label="Controversial"></mat-tab>
             <mat-tab label="Rising"></mat-tab>
             <mat-tab label="Top"></mat-tab>
-            <mat-tab *ngIf="loggedIn" label="NSFW"></mat-tab>
+            <mat-tab *ngIf="false" label="NSFW"></mat-tab>
         </mat-tab-group>
         <span class="spacer"></span>
     </mat-toolbar-row>
