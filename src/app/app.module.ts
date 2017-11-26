@@ -9,6 +9,7 @@ import { MaterialModule } from './material.module';
 import { HomePageModule } from './home-page/home-page.module';
 import { LayoutModule } from './layout/layout.module';
 import { RoutingModule } from './routing.module';
+import { SearchResultsPageModule } from './search-results-page/search-results-page.module';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { RoutingModule } from './routing.module';
         MaterialModule,
         HomePageModule,
         LayoutModule,
+        SearchResultsPageModule,
         RoutingModule
     ],
     providers: [],

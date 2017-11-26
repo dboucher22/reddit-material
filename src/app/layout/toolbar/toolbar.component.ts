@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation, Input, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-toolbar',
@@ -13,7 +14,7 @@ export class ToolbarComponent implements OnInit {
     @Output() login = new EventEmitter<boolean>();
     @Output() logout = new EventEmitter<boolean>();
 
-    constructor() { }
+    constructor(private router: Router) { }
 
     ngOnInit() {
     }

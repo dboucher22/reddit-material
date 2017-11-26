@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Route } from '@angular/router';
+import { Route, RouterModule } from '@angular/router';
 
 import { HomePageComponent } from './home-page/home-page.component';
+import { SearchResultsPageComponent } from './search-results-page/search-results-page.component';
 
 const routes: Route[] = [
-    { path: '', component: HomePageComponent }
+    { path: '', component: HomePageComponent },
+    {
+        path: 'search', children: [
+            { path: '', pathMatch: 'full', component: SearchResultsPageComponent },
+            { path: ':searchterm', pathMatch: 'full', component: SearchResultsPageComponent }
+        ]
+    },
 ];
 
 @NgModule({
