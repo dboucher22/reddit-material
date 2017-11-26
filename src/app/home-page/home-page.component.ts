@@ -1,4 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+import { CommunitiesService } from '../services/communities.service';
 
 interface Submission {
     id: number;
@@ -17,48 +20,12 @@ interface Submission {
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePageComponent implements OnInit {
-    submissions: Submission[] = [
-        {
-            id: 1,
-            community: 'Mock Community',
-            timeString: '1 hour',
-            imageUrl: '',
-            thumbnailUrl: 'https://b.thumbs.redditmedia.com/9b-uOE0aGBGLydL5UHSqx2RbYf7WW-4rPPc-U3os2ug.jpg',
-            title: 'Title 1',
-            user: 'user1'
-        },
-        {
-            id: 2,
-            community: 'Mock Community 2',
-            timeString: '12 minutes',
-            imageUrl: '',
-            thumbnailUrl: 'https://b.thumbs.redditmedia.com/dB1wHT3nQkbkLkU5_6QYvNX_ncFzXHaq0KKshYibP2M.jpg',
-            title: 'This is an extremely long title so I can test how the cards wrap. ' +
-                'I might need to add a bottom margin to the card-details div. Edit: Looks good now.',
-            user: 'user2'
-        },
-        {
-            id: 3,
-            community: 'Mock Community',
-            timeString: '1 hour',
-            imageUrl: '',
-            thumbnailUrl: 'https://b.thumbs.redditmedia.com/9b-uOE0aGBGLydL5UHSqx2RbYf7WW-4rPPc-U3os2ug.jpg',
-            title: 'Title 1',
-            user: 'user1'
-        },
-        {
-            id: 4,
-            community: 'Mock Community 2',
-            timeString: '12 minutes',
-            imageUrl: '',
-            thumbnailUrl: 'https://b.thumbs.redditmedia.com/dB1wHT3nQkbkLkU5_6QYvNX_ncFzXHaq0KKshYibP2M.jpg',
-            title: 'This is an extremely long title so I can test how the cards wrap. ' +
-                'I might need to add a bottom margin to the card-details div. Edit: Looks good now.',
-            user: 'user2'
-        }
-    ];
+    result: Observable<any>;
 
-    constructor() { }
+    constructor(private communitiesService: CommunitiesService) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.result = this.communitiesService.getAll();
+        this.result.subscribe(item => console.log(item));
+    }
 }

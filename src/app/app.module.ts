@@ -8,6 +8,7 @@ import { LoginPageModule } from './login-page/login-page.module';
 import { MaterialModule } from './material.module';
 import { RoutingModule } from './routing.module';
 import { SearchResultsPageModule } from './search-results-page/search-results-page.module';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
     declarations: [
@@ -15,12 +16,13 @@ import { SearchResultsPageModule } from './search-results-page/search-results-pa
     ],
     imports: [
         BrowserModule,
-        MaterialModule,
         HomePageModule,
         LayoutModule,
         LoginPageModule,
+        MaterialModule,
+        RoutingModule,
         SearchResultsPageModule,
-        RoutingModule
+        ServicesModule
     ],
     providers: [],
     bootstrap: [AppComponent]
