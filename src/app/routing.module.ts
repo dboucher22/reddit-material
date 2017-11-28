@@ -3,6 +3,7 @@ import { Route, RouterModule } from '@angular/router';
 
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { PreferencesPageComponent } from './preferences-page/preferences-page.component';
 import { SearchResultsPageComponent } from './search-results-page/search-results-page.component';
 
 const routes: Route[] = [
@@ -14,6 +15,7 @@ const routes: Route[] = [
             { path: ':searchterm', pathMatch: 'full', component: SearchResultsPageComponent }
         ]
     },
+    { path: 'preferences', component: PreferencesPageComponent }
 ];
 
 @NgModule({
