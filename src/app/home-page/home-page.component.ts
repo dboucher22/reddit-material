@@ -25,7 +25,7 @@ export class HomePageComponent implements OnInit {
     constructor(private communitiesService: CommunitiesService) { }
 
     ngOnInit() {
-        this.result = this.communitiesService.getAll();
-        this.result.subscribe(item => console.log(item));
+        // this.result = this.communitiesService.getAll();
+        // this.result.subscribe(item => console.log(item));
     }
 }

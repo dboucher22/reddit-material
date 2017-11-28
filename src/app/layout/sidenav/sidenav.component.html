@@ -2,27 +2,25 @@
     <div class="sidenav-heading">
         <h5>Communities</h5>
         <span class="spacer"></span>
-        <a mat-button class="sidenav-settings-button" color="accent" *ngIf="loggedIn">
+        <a mat-button class="sidenav-settings-button" color="accent">
             <mat-icon>settings</mat-icon>
         </a>
     </div>
     <div class="sidenav-logged-out-content">
-        <small *ngIf="!loggedIn">
+        <small>
             Communities you subscribe to appear in this list.
         </small>
         <button mat-raised-button class="full-width icon-button" color="warn">
             <mat-icon>explore</mat-icon> Explore Communities</button>
     </div>
-    <ng-container *ngIf="!(communities && communities.length) || loggedIn">
-        <div class="sidenav-subscriptions-heading">
-            <h6>Subscriptions</h6>
-        </div>
-        <mat-list>
-            <mat-list-item *ngFor="let community of communities">
-                <a mat-button href="https://www.reddit.com/r/{{community.name}}" class="sidenav-menu-item" target="_blank">
-                    {{community.name}}
-                </a>
-            </mat-list-item>
-        </mat-list>
-    </ng-container>
+    <div class="sidenav-subscriptions-heading">
+        <h6>Subscriptions</h6>
+    </div>
+    <mat-list>
+        <mat-list-item *ngFor="let community of communities">
+            <a mat-button href="https://www.reddit.com/r/{{community.name}}" class="sidenav-menu-item" target="_blank">
+                {{community.name}}
+            </a>
+        </mat-list-item>
+    </mat-list>
 </div>
