@@ -6,7 +6,7 @@ import { PreferencesPageComponent } from './preferences-page.component';
 
 const routes: Route[] = [
     {
-        path: '',
+        path: 'preferences',
         component: PreferencesPageComponent,
         children: [
             { path: '', pathMatch: 'full', redirectTo: 'options' },
