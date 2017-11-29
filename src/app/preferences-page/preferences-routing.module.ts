@@ -31,4 +31,4 @@ const routes: Route[] = [
     ],
     providers: []
 })
-export class PreferencesPageRoutingModule { }
+export class PreferencesRoutingModule { }

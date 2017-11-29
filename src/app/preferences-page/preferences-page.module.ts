@@ -4,18 +4,18 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../material.module';
 import { PrefsOptionsModule } from './options/options.module';
 import { PreferencesPageComponent } from './preferences-page.component';
-import { PreferencesPageRoutingModule } from './preferences-routing.module';
+import { PreferencesRoutingModule } from './preferences-routing.module';
 
 @NgModule({
     imports: [
         CommonModule,
         MaterialModule,
-        PreferencesPageRoutingModule,
+        PreferencesRoutingModule,
         PrefsOptionsModule
     ],
     exports: [
         PrefsOptionsModule,
-        PreferencesPageRoutingModule
+        PreferencesRoutingModule
     ],
     declarations: [PreferencesPageComponent]
 })

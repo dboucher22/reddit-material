@@ -7,7 +7,7 @@ import { LayoutModule } from './layout/layout.module';
 import { LoginPageModule } from './login-page/login-page.module';
 import { MaterialModule } from './material.module';
 import { PreferencesPageModule } from './preferences-page/preferences-page.module';
-import { PreferencesPageRoutingModule } from './preferences-page/preferences-routing.module';
+import { PreferencesRoutingModule } from './preferences-page/preferences-routing.module';
 import { RoutingModule } from './routing.module';
 import { SearchResultsPageModule } from './search-results-page/search-results-page.module';
 import { ServicesModule } from './services/services.module';
@@ -23,7 +23,7 @@ import { ServicesModule } from './services/services.module';
         LoginPageModule,
         MaterialModule,
         PreferencesPageModule,
-        PreferencesPageRoutingModule,
+        PreferencesRoutingModule,
         RoutingModule,
         SearchResultsPageModule,
         ServicesModule
