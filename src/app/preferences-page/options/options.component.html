@@ -1,3 +1,119 @@
-<p>
-  options works!
-</p>
+<div class="prefs-options-container">
+    <div class="prefs-options-toc">
+        <h6>Contents</h6>
+        <a [routerLink]="['./']" fragment="language" (click)="scrollTo(language)">Language</a>
+        <a [routerLink]="['./']" fragment="clicking-options" (click)="scrollTo(clickingoptions)">Clicking Options</a>
+        <a [routerLink]="['./']" fragment="media-options" (click)="scrollTo(mediaoptions)">Media Options</a>
+        <a [routerLink]="['./']" fragment="link-options" (click)="scrollTo(linkoptions)">Link Options</a>
+        <a [routerLink]="['./']" fragment="comment-options" (click)="scrollTo(commentoptions)">Comment Options</a>
+        <a [routerLink]="['./']" fragment="message-options" (click)="scrollTo(messageoptions)">Message Options</a>
+        <a [routerLink]="['./']" fragment="email-options" (click)="scrollTo(emailoptions)">Email Options</a>
+        <a [routerLink]="['./']" fragment="display-options" (click)="scrollTo(displayoptions)">Display Options</a>
+        <a [routerLink]="['./']" fragment="content-options" (click)="scrollTo(contentoptions)">Content Options</a>
+        <a [routerLink]="['./']" fragment="privacy-options" (click)="scrollTo(privacyoptions)">Privacy Options</a>
+        <a [routerLink]="['./']" fragment="personalization-options" (click)="scrollTo(personalizationoptions)">Personalization Options</a>
+        <a [routerLink]="['./']" fragment="beta-options" (click)="scrollTo(betaoptions)">Beta Options</a>
+    </div>
+    <div div="prefs-options">
+        <section #language class="options-section">
+            <h5>Language</h5>
+            <p>English (US)</p>
+        </section>
+        <section #clickingoptions class="options-section">
+            <h5>Clicking Options</h5>
+            <mat-checkbox>Open links in a new window</mat-checkbox>
+        </section>
+        <section #mediaoptions class="options-section">
+            <h5 class="multiple-options">Media</h5>
+            <h6>Thumbnails</h6>
+            <mat-checkbox>Show thumbnails next to links</mat-checkbox>
+            <mat-checkbox>Show thumbnails based on subreddit preferences</mat-checkbox>
+        </section>
+        <section class="options-section">
+            <h6>Preview</h6>
+            <mat-checkbox>Auto expand media previews</mat-checkbox>
+            <mat-checkbox>Expand media previews based on subreddit preferences</mat-checkbox>
+        </section>
+        <section class="options-section">
+            <h6>Reddit Video Player</h6>
+            <mat-checkbox>Autoplay Reddit videos on the desktop comments page</mat-checkbox>
+        </section>
+        <section class="options-section">
+            <h6>NSFW Content</h6>
+            <mat-checkbox>Show images for NSFW/18+ content</mat-checkbox>
+        </section>
+        <section #linkoptions class="options-section">
+            <h5>Link Options</h5>
+            <mat-checkbox>Compress the link display</mat-checkbox>
+            <mat-checkbox>Show the spotlight box on the home feed</mat-checkbox>
+            <mat-checkbox>Show trending subreddits on the home feed</mat-checkbox>
+            <mat-checkbox>Show me links I've already viewed</mat-checkbox>
+            <mat-checkbox>Show additional details in the domain text when available</mat-checkbox>
+            <mat-checkbox>Show submissions you've upvoted</mat-checkbox>
+            <mat-checkbox>Show submissions you've downvoted</mat-checkbox>
+            <p>Display [ 50 ] links at once</p>
+            <p>Only show submissions with a score more than [ -4 ]</p>
+        </section>
+        <section #commentoptions class="options-section">
+            <h5>Comment Options</h5>
+            <p>Sort comments by [ Best (Recommended) ]</p>
+            <mat-checkbox>Use suggested sorts</mat-checkbox>
+            <mat-checkbox>Show a dagger (†) on comments voted controversial</mat-checkbox>
+            <p>Only show comments with a score more than [ -4 ]</p>
+            <p>Display [ 200 ] comments by default</p>
+        </section>
+        <section #messageoptions class="options-section">
+            <h5>Message Options</h5>
+            <mat-checkbox>Show message conversations in the inbox</mat-checkbox>
+            <mat-checkbox>Collapse messages after I've read them</mat-checkbox>
+            <mat-checkbox>Mark messages as read when I open my inbox</mat-checkbox>
+            <mat-checkbox>Notify me when people say my username</mat-checkbox>
+            <mat-checkbox>Enable threaded modmail display</mat-checkbox>
+            <mat-checkbox>Send message notifications in the browser</mat-checkbox>
+            <div class="options-section-button">
+                <a mat-button>Control who can send me messages</a>
+                <span class="spacer"></span>
+            </div>
+        </section>
+        <section #emailoptions class="options-section">
+            <h5>Email Options</h5>
+            <mat-checkbox>Send messages as emails</mat-checkbox>
+            <mat-checkbox>Send email digests</mat-checkbox>
+        </section>
+        <section #displayoptions class="options-section">
+            <h5>Display Options</h5>
+            <mat-checkbox>Allow subreddits to show me custom themes</mat-checkbox>
+            <mat-checkbox>Show user flair</mat-checkbox>
+            <mat-checkbox>Show link flair</mat-checkbox>
+            <!-- <mat-checkbox>Show legacy search page</mat-checkbox> -->
+        </section>
+        <section #contentoptions class="options-section">
+            <h5>Content Options</h5>
+            <mat-checkbox>I am over 18 years old and willing to view adult content</mat-checkbox>
+            <mat-checkbox>Label posts that are not safe for work (NSFW)</mat-checkbox>
+            <mat-checkbox>Include NSFW search results in searches</mat-checkbox>
+            <mat-checkbox>Enable private RSS feeds</mat-checkbox>
+        </section>
+        <section #privacyoptions class="options-section">
+            <h5>Privacy Options</h5>
+            <mat-checkbox>Make my votes public</mat-checkbox>
+            <mat-checkbox>Allow my data to be used for research purposes</mat-checkbox>
+            <mat-checkbox>Allow search engines to index my user profile</mat-checkbox>
+            <mat-checkbox>Allow Reddit to log my outbound clicks for personalization</mat-checkbox>
+        </section>
+        <section #personalizationoptions class="options-section">
+            <h5>Personalization Options</h5>
+            <div class="options-section-button">
+                <a mat-button>Set personalization preferences</a>
+                <span class="spacer"></span>
+            </div>
+        </section>
+        <section #betaoptions class="options-section">
+            <h5>Beta Options</h5>
+            <mat-checkbox>I would like to beta test features for reddit</mat-checkbox>
+        </section>
+        <section class="options-actions">
+            <button mat-raised-button color="primary">Save Options</button>
+        </section>
+    </div>
+</div>

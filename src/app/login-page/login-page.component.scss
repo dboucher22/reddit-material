@@ -1,14 +1,15 @@
 .login-page-wrapper {
     display: flex;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     mat-card {
         max-width: 400px;
         mat-card-title {
             margin: -24px;
             margin-bottom: 20px;
+            margin-left: 0;
             padding: 25px 0;
             h4 {
-                text-align: center;
                 margin-bottom: 0;
             }
         }
@@ -34,13 +35,21 @@
             }
             .login-form-actions {
                 display: flex;
+                flex-direction: column;
                 button {
                     flex: 1;
+                    margin-bottom: 5px;
                 }
             }
         }
         mat-card-footer {
             padding: 20px;
+            a {
+                color: #9696da;
+                h5 {
+                    margin: 0;
+                }
+            }
         }
     }
 }

@@ -2,29 +2,33 @@
     <mat-card>
         <mat-card-title>Preferences</mat-card-title>
         <mat-card-content>
-            <mat-tab-group>
-                <mat-tab label="Options">
-                    <app-prefs-options></app-prefs-options>
-                </mat-tab>
-                <mat-tab label="Apps">
-                    Apps Component
-                </mat-tab>
-                <mat-tab label="RSS Feeds">
-                    RSS Feeds Component
-                </mat-tab>
-                <mat-tab label="Friends">
-                    Friends Component
-                </mat-tab>
-                <mat-tab label="Blocked">
-                    Blocked Component
-                </mat-tab>
-                <mat-tab label="Password/Email">
-                    Password/Email Component
-                </mat-tab>
-                <mat-tab label="Deactivate">
-                    Deactivate Component
-                </mat-tab>
-            </mat-tab-group>
+            <nav mat-tab-nav-bar>
+                <a mat-tab-link [routerLink]="['options']" routerLinkActive #rla1="routerLinkActive" [active]="rla1.isActive">
+                    Options
+                </a>
+                <a mat-tab-link [routerLink]="['apps']" routerLinkActive #rla2="routerLinkActive" [active]="rla2.isActive">
+                    Apps
+                </a>
+                <a mat-tab-link [routerLink]="['rss-feeds']" routerLinkActive #rla3="routerLinkActive" [active]="rla3.isActive">
+                    RSS Feeds
+                </a>
+                <a mat-tab-link [routerLink]="['friends']" routerLinkActive #rla4="routerLinkActive" [active]="rla4.isActive">
+                    Friends
+                </a>
+                <a mat-tab-link [routerLink]="['blocked']" routerLinkActive #rla5="routerLinkActive" [active]="rla5.isActive">
+                    Blocked
+                </a>
+                <a mat-tab-link [routerLink]="['email']" routerLinkActive #rla6="routerLinkActive" [active]="rla6.isActive">
+                    Email
+                </a>
+                <a mat-tab-link [routerLink]="['password']" routerLinkActive #rla7="routerLinkActive" [active]="rla7.isActive">
+                    Password
+                </a>
+                <a mat-tab-link [routerLink]="['deactivate']" routerLinkActive #rla8="routerLinkActive" [active]="rla8.isActive">
+                    Deactivate
+                </a>
+            </nav>
+            <router-outlet></router-outlet>
         </mat-card-content>
     </mat-card>
 </div>

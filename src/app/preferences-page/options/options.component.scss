@@ -1,0 +1,56 @@
+.prefs-options-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    .prefs-options-toc {
+        display: flex;
+        flex-direction: column;
+        padding-right: 50px;
+        a {
+            font-size: 13px;
+            color: #9696da;
+            cursor: pointer;
+            padding: 1px 0;
+            margin: 2px 0;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        a:active {
+            color: #fff;
+        }
+    }
+    .prefs-options {
+        display: flex;
+        flex: 1;
+    }
+    .options-actions {
+        margin-top: 10px;
+    }
+    .options-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        a,
+        p,
+        mat-checkbox {
+            margin: 5px;
+            margin-left: 10px;
+            color: #ddd;
+        }
+        a {
+            width: initial!important;
+            min-width: initial;
+        }
+        .options-section-button {
+            flex: 1;
+            display: flex;
+            a {
+                color: #9696da;
+            }
+        }
+    }
+    h5,
+    h6 {
+        margin-top: 15px;
+    }
+}

@@ -11,7 +11,6 @@ import {
     MatTabsModule,
     MatToolbarModule,
 } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const materialImports = [
     MatButtonModule,
@@ -28,7 +27,7 @@ const materialImports = [
 
 @NgModule({
     imports: [
-        BrowserAnimationsModule,
+        // BrowserAnimationsModule,
         ...materialImports
     ],
     exports: [
