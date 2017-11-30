@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from '../../material.module';
-import { OptionsComponent } from './options.component';
+import { DeactivateComponent } from './deactivate.component';
+
 
 @NgModule({
     imports: [
@@ -11,6 +12,6 @@ import { OptionsComponent } from './options.component';
         MaterialModule,
         RouterModule
     ],
-    declarations: [OptionsComponent]
+    declarations: [DeactivateComponent]
 })
-export class PrefsOptionsModule { }
+export class PrefsDeactivateModule { }

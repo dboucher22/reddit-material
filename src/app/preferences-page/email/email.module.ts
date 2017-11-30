@@ -11,7 +11,6 @@ import { EmailComponent } from './email.component';
         MaterialModule,
         RouterModule
     ],
-    exports: [EmailComponent],
     declarations: [EmailComponent]
 })
 export class PrefsEmailModule { }

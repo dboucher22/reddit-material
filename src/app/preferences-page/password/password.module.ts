@@ -11,7 +11,6 @@ import { PasswordComponent } from './password.component';
         MaterialModule,
         RouterModule
     ],
-    exports: [],
     declarations: [PasswordComponent]
 })
 export class PrefsPasswordModule { }

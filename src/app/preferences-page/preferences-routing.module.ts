@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 
+import { DeactivateComponent } from './deactivate/deactivate.component';
 import { EmailComponent } from './email/email.component';
 import { OptionsComponent } from './options/options.component';
 import { PasswordComponent } from './password/password.component';
@@ -19,7 +20,7 @@ const routes: Route[] = [
             { path: 'blocked', pathMatch: 'full', component: OptionsComponent },
             { path: 'email', pathMatch: 'full', component: EmailComponent },
             { path: 'password', pathMatch: 'full', component: PasswordComponent },
-            { path: 'deactivate', pathMatch: 'full', component: OptionsComponent }
+            { path: 'deactivate', pathMatch: 'full', component: DeactivateComponent }
         ]
     }
 ];
