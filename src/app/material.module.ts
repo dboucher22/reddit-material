@@ -20,9 +20,9 @@ const materialImports = [
     MatInputModule,
     MatListModule,
     MatMenuModule,
+    MatSidenavModule,
     MatTabsModule,
     MatToolbarModule,
-    MatSidenavModule
 ];
 
 @NgModule({

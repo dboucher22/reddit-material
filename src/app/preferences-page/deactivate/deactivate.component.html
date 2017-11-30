@@ -1,3 +1,44 @@
-<p>
-  deactivate works!
-</p>
+<div class="deactivate-container">
+    <form class="deactivate-form">
+        <h4>Deactivate your reddit account</h4>
+
+        <section class="deactivate-form-row">
+            <h6>Sorry to see you go</h6>
+            <ul>
+                <li>If you're having a problem on Reddit, please consider contacting us about it before deactivating your account.</li>
+                <li>Deactivating your account will not delete the content of posts and comments you've made on Reddit. To do
+                    so, please delete them individually.</li>
+            </ul>
+        </section>
+
+        <section class="deactivate-form-row">
+            <h6>
+                Why are you deactivating this account?
+            </h6>
+            <mat-form-field class="full-width">
+                <textarea matInput placeholder="Please enter your reason: (Optional)" rows="2"></textarea>
+            </mat-form-field>
+        </section>
+
+        <section class="deactivate-form-row">
+            <h5>Account Credentials&nbsp;
+                <small>
+                    <mat-icon>verified_user</mat-icon>&nbsp;Security check</small>
+            </h5>
+            <mat-form-field class="full-width">
+                <input matInput type="email" placeholder="Username">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <input matInput type="password" placeholder="Password">
+            </mat-form-field>
+        </section>
+
+        <section class="deactivate-form-row">
+            <mat-checkbox>I understand that deactivated accounts are not recoverable.</mat-checkbox>
+        </section>
+
+        <section class="deactivate-form-actions">
+            <button mat-raised-button color="warn">Deactivate</button>
+        </section>
+    </form>
+</div>
