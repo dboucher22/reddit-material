@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../material.module';
 import { PrefsEmailModule } from './email/email.module';
 import { PrefsOptionsModule } from './options/options.module';
+import { PrefsPasswordModule } from './password/password.module';
 import { PreferencesPageComponent } from './preferences-page.component';
 import { PreferencesRoutingModule } from './preferences-routing.module';
 
@@ -13,7 +14,8 @@ import { PreferencesRoutingModule } from './preferences-routing.module';
         MaterialModule,
         PreferencesRoutingModule,
         PrefsEmailModule,
-        PrefsOptionsModule
+        PrefsOptionsModule,
+        PrefsPasswordModule
     ],
     exports: [
         PrefsOptionsModule,

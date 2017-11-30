@@ -3,6 +3,7 @@ import { Route, RouterModule } from '@angular/router';
 
 import { EmailComponent } from './email/email.component';
 import { OptionsComponent } from './options/options.component';
+import { PasswordComponent } from './password/password.component';
 import { PreferencesPageComponent } from './preferences-page.component';
 
 const routes: Route[] = [
@@ -17,7 +18,7 @@ const routes: Route[] = [
             { path: 'friends', pathMatch: 'full', component: OptionsComponent },
             { path: 'blocked', pathMatch: 'full', component: OptionsComponent },
             { path: 'email', pathMatch: 'full', component: EmailComponent },
-            { path: 'password', pathMatch: 'full', component: OptionsComponent },
+            { path: 'password', pathMatch: 'full', component: PasswordComponent },
             { path: 'deactivate', pathMatch: 'full', component: OptionsComponent }
         ]
     }
