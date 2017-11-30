@@ -1,0 +1,30 @@
+.prefs-email-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    .email-form {
+        min-width: 400px;
+        max-width: 400px;
+        .email-form-email {}
+        .email-form-confirm-email {}
+        .email-form-password {}
+        .email-form-actions {
+            margin-top: 10px;
+        }
+        p.email-form-current-email {
+            margin-bottom: 25px;
+            margin-top: 25px;
+            a {
+                margin-top: 10px;
+                color: #9696da;
+            }
+            .email-placeholder {
+                color: #b0bec5;
+            }
+        }
+    }
+    h5,
+    h6 {
+        margin-top: 15px;
+    }
+}

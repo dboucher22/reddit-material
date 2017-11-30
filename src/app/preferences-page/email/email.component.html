@@ -1,3 +1,30 @@
-<p>
-    email works!
-</p>
+<div class="prefs-email-container">
+    <form class="email-form">
+        <h5>Change Email</h5>
+        <p class="email-form-current-email">
+            <span>Current Email:
+                <span class="email-placeholder">daneventer@gmail.com</span>
+            </span>
+            <small>(Verification Pending)</small>
+            <a mat-button color="primary">Resend verification email</a>
+        </p>
+        <div class="email-form-email">
+            <mat-form-field class="full-width">
+                <input matInput type="email" placeholder="New Email" autofocus>
+            </mat-form-field>
+        </div>
+        <div class="email-form-confirm-email">
+            <mat-form-field class="full-width">
+                <input matInput type="email" placeholder="Confirm New Email">
+            </mat-form-field>
+        </div>
+        <div class="email-form-password">
+            <mat-form-field class="full-width">
+                <input matInput type="password" placeholder="Current Password">
+            </mat-form-field>
+        </div>
+        <div class="email-form-actions">
+            <button mat-raised-button color="primary">Change Email</button>
+        </div>
+    </form>
+</div>
