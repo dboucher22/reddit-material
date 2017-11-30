@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { MaterialModule } from '../material.module';
+import { PrefsEmailModule } from './email/email.module';
 import { PrefsOptionsModule } from './options/options.module';
 import { PreferencesPageComponent } from './preferences-page.component';
 import { PreferencesRoutingModule } from './preferences-routing.module';
@@ -11,6 +12,7 @@ import { PreferencesRoutingModule } from './preferences-routing.module';
         CommonModule,
         MaterialModule,
         PreferencesRoutingModule,
+        PrefsEmailModule,
         PrefsOptionsModule
     ],
     exports: [

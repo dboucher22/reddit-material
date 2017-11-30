@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 
+import { EmailComponent } from './email/email.component';
 import { OptionsComponent } from './options/options.component';
 import { PreferencesPageComponent } from './preferences-page.component';
 
@@ -15,7 +16,7 @@ const routes: Route[] = [
             { path: 'rss-feeds', pathMatch: 'full', component: OptionsComponent },
             { path: 'friends', pathMatch: 'full', component: OptionsComponent },
             { path: 'blocked', pathMatch: 'full', component: OptionsComponent },
-            { path: 'email', pathMatch: 'full', component: OptionsComponent },
+            { path: 'email', pathMatch: 'full', component: EmailComponent },
             { path: 'password', pathMatch: 'full', component: OptionsComponent },
             { path: 'deactivate', pathMatch: 'full', component: OptionsComponent }
         ]
