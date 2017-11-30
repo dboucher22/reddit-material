@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
+import { LayoutService } from '../layout/layout.service';
 import { CommunitiesService } from '../services/communities.service';
 
 interface Submission {
@@ -22,10 +23,13 @@ interface Submission {
 export class HomePageComponent implements OnInit {
     result: Observable<any>;
 
-    constructor(private communitiesService: CommunitiesService) { }
+    constructor(
+        private layoutService: LayoutService,
+        private communitiesService: CommunitiesService) { }
 
     ngOnInit() {
         // this.result = this.communitiesService.getAll();
         // this.result.subscribe(item => console.log(item));
+        this.layoutService.setToolbarSecondaryRowVisibleState$(true);
     }
 }

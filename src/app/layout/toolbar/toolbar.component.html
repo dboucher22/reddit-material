@@ -28,7 +28,7 @@
         <a mat-raised-button color="primary" [routerLink]="['login']">
             <mat-icon>input</mat-icon> Log In</a>
     </mat-toolbar-row>
-    <mat-toolbar-row class="main-toolbar-secondary-row">
+    <mat-toolbar-row *ngIf="secondaryRowVisible$|async" class="main-toolbar-secondary-row">
         <span class="main-toolbar-content-placeholder">
             <!-- Communities sidenav toggle button placeholder (<ng-content>) -->
             <ng-content></ng-content>

@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+import { LayoutService } from '../layout/layout.service';
+
 @Component({
     selector: 'app-preferences-page',
     templateUrl: './preferences-page.component.html',
@@ -7,10 +9,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     encapsulation: ViewEncapsulation.None
 })
 export class PreferencesPageComponent implements OnInit {
-
-    constructor() { }
+    constructor(private layoutService: LayoutService) { }
 
     ngOnInit() {
+        this.layoutService.setToolbarSecondaryRowVisibleState$(false);
     }
-
 }

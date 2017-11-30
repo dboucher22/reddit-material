@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
+import { LayoutService } from '../layout/layout.service';
+
 @Component({
     selector: 'app-login-page',
     templateUrl: './login-page.component.html',
     styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent implements OnInit {
-    constructor() { }
+    constructor(private layoutService: LayoutService) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.layoutService.setToolbarSecondaryRowVisibleState$(false);
+    }
 }

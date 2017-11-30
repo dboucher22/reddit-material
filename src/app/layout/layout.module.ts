@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 
+import { LayoutService } from './layout.service';
+import { SearchModule } from './search/search.module';
 import { SidenavModule } from './sidenav/sidenav.module';
 import { ToolbarModule } from './toolbar/toolbar.module';
-import { SearchModule } from './search/search.module';
 
 @NgModule({
     imports: [
@@ -14,6 +15,9 @@ import { SearchModule } from './search/search.module';
         SearchModule,
         SidenavModule,
         ToolbarModule
+    ],
+    providers: [
+        LayoutService
     ]
 })
 export class LayoutModule { }

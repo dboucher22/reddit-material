@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+
+import { LayoutService } from '../layout.service';
 
 @Component({
     selector: 'app-toolbar',
@@ -8,8 +10,10 @@ import { Router } from '@angular/router';
     encapsulation: ViewEncapsulation.None
 })
 export class ToolbarComponent implements OnInit {
-    constructor(private router: Router) { }
+    secondaryRowVisible$: BehaviorSubject<boolean>;
+    constructor(private layoutService: LayoutService) { }
 
     ngOnInit() {
+        this.secondaryRowVisible$ = this.layoutService.toolbarSecondaryRowVisibleState$;
     }
 }
