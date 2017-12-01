@@ -5,6 +5,7 @@ import { MaterialModule } from '../material.module';
 import { PrefsBlockedModule } from './blocked/blocked.module';
 import { PrefsDeactivateModule } from './deactivate/deactivate.module';
 import { PrefsEmailModule } from './email/email.module';
+import { PrefsFriendsModule } from './friends/friends.module';
 import { PrefsOptionsModule } from './options/options.module';
 import { PrefsPasswordModule } from './password/password.module';
 import { PreferencesPageComponent } from './preferences-page.component';
@@ -17,6 +18,7 @@ import { PreferencesRoutingModule } from './preferences-routing.module';
         PreferencesRoutingModule,
         PrefsBlockedModule,
         PrefsDeactivateModule,
+        PrefsFriendsModule,
         PrefsEmailModule,
         PrefsOptionsModule,
         PrefsPasswordModule

@@ -1,0 +1,22 @@
+<div class="friends-container">
+    <div class="friends-row">
+        <h6>Helpful Info</h6>
+        <p>To view reddit with only submissions from your friends, go to
+            <a>reddit.com/r/friends</a>
+        </p>
+    </div>
+    <div class="friends-row">
+        <h5>Add A Friend</h5>
+        <form class="friends-form">
+            <mat-form-field>
+                <input matInput type="text" name="friendToAdd" [(ngModel)]="friendToAdd">
+            </mat-form-field>
+            <button mat-raised-button color="accent" (click)="onAddFriendClicked()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </form>
+        <ul>
+            <li *ngFor="let friend of friends">{{friend}}</li>
+        </ul>
+    </div>
+</div>

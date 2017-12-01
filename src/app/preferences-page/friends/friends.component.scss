@@ -1,0 +1,42 @@
+.friends-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    h4,
+    h5,
+    h6 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .friends-row {
+        flex: 1;
+        p {
+            line-height: 20px;
+            color: #ddd;
+        }
+        a {
+            color: #9696da;
+            cursor: pointer;
+            padding: 1px 0;
+            margin: 2px 0;
+            text-decoration: none;
+        }
+        a:active {
+            color: #fff;
+        }
+        .friends-form {
+            display: flex;
+            flex-direction: row;
+            mat-form-field {
+                width: 100%;
+            }
+            button {
+                margin-left: 10px;
+                min-width: initial;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
