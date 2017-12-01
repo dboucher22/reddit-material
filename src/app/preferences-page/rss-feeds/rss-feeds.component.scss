@@ -1,0 +1,27 @@
+.rss-feeds-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    h4,
+    h5,
+    h6 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    ul {
+        list-style: none;
+        padding-left: 10px;
+        li {
+            padding-bottom: 5px;
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
+    .rss-feeds-row {
+        flex: 1;
+        p {
+            line-height: 20px;
+        }
+    }
+}

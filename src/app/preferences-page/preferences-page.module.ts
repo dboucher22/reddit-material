@@ -10,6 +10,7 @@ import { PrefsOptionsModule } from './options/options.module';
 import { PrefsPasswordModule } from './password/password.module';
 import { PreferencesPageComponent } from './preferences-page.component';
 import { PreferencesRoutingModule } from './preferences-routing.module';
+import { PrefsRssFeedsModule } from './rss-feeds/rss-feeds.module';
 
 @NgModule({
     imports: [
@@ -21,7 +22,8 @@ import { PreferencesRoutingModule } from './preferences-routing.module';
         PrefsFriendsModule,
         PrefsEmailModule,
         PrefsOptionsModule,
-        PrefsPasswordModule
+        PrefsPasswordModule,
+        PrefsRssFeedsModule
     ],
     exports: [
         PreferencesRoutingModule
