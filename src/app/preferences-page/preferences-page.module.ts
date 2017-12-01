@@ -6,6 +6,7 @@ import { PrefsBlockedModule } from './blocked/blocked.module';
 import { PrefsDeactivateModule } from './deactivate/deactivate.module';
 import { PrefsEmailModule } from './email/email.module';
 import { PrefsFriendsModule } from './friends/friends.module';
+import { PrefsManageAppsModule } from './manage-apps/manage-apps.module';
 import { PrefsOptionsModule } from './options/options.module';
 import { PrefsPasswordModule } from './password/password.module';
 import { PreferencesPageComponent } from './preferences-page.component';
@@ -21,6 +22,7 @@ import { PrefsRssFeedsModule } from './rss-feeds/rss-feeds.module';
         PrefsDeactivateModule,
         PrefsFriendsModule,
         PrefsEmailModule,
+        PrefsManageAppsModule,
         PrefsOptionsModule,
         PrefsPasswordModule,
         PrefsRssFeedsModule
