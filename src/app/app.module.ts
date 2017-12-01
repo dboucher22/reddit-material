@@ -2,6 +2,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { HttpStatusPagesModule } from './_http-status-pages/http-status-pages.module';
 import { AppComponent } from './app.component';
 import { HomePageModule } from './home-page/home-page.module';
 import { LayoutModule } from './layout/layout.module';
@@ -20,6 +21,7 @@ import { ServicesModule } from './services/services.module';
     imports: [
         BrowserAnimationsModule,
         HomePageModule,
+        HttpStatusPagesModule,
         LayoutModule,
         LoginPageModule,
         MaterialModule,
