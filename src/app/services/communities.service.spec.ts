@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { inject, TestBed } from '@angular/core/testing';
 
 import { CommunitiesService } from './communities.service';
@@ -5,6 +6,7 @@ import { CommunitiesService } from './communities.service';
 describe('CommunitiesService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
+            imports: [HttpClientModule],
             providers: [CommunitiesService]
         });
     });
