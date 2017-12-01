@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { MaterialModule } from '../material.module';
+import { PrefsBlockedModule } from './blocked/blocked.module';
 import { PrefsDeactivateModule } from './deactivate/deactivate.module';
 import { PrefsEmailModule } from './email/email.module';
 import { PrefsOptionsModule } from './options/options.module';
@@ -14,13 +15,13 @@ import { PreferencesRoutingModule } from './preferences-routing.module';
         CommonModule,
         MaterialModule,
         PreferencesRoutingModule,
+        PrefsBlockedModule,
         PrefsDeactivateModule,
         PrefsEmailModule,
         PrefsOptionsModule,
         PrefsPasswordModule
     ],
     exports: [
-        PrefsOptionsModule,
         PreferencesRoutingModule
     ],
     declarations: [PreferencesPageComponent]

@@ -1,0 +1,53 @@
+<div class="blocked-container">
+    <div class="blocked-container-column">
+        <div class="blocked-row">
+            <h6>Helpful Info</h6>
+            <ul class="info-list">
+                <li>To block a user click 'block user' below a message from a user you wish to block from messaging you.</li>
+                <li>Trusted users will always be able to send you PMs.</li>
+            </ul>
+        </div>
+        <div class="blocked-row">
+            <h5>Messaging Preferences</h5>
+            Show private messages from:
+            <mat-radio-group>
+                <ul>
+                    <li>
+                        <mat-radio-button value="1" [checked]="true">Everyone, except blocked users</mat-radio-button>
+
+                    </li>
+                    <li>
+                        <mat-radio-button value="2">Only trusted users</mat-radio-button>
+
+                    </li>
+                </ul>
+            </mat-radio-group>
+            <div class="blocked-row-actions">
+                <small>Admins and moderators of subreddits you have participated in will always be able to message you.</small>
+                <button mat-raised-button color="primary">Save Options</button>
+            </div>
+        </div>
+    </div>
+    <div class="blocked-container-column">
+        <div class="blocked-row">
+            <h4>Blocked Users</h4>
+            <div>
+                No users found.
+            </div>
+        </div>
+        <div class="blocked-row">
+            <h4>Trusted Users</h4>
+            <form class="blocked-row-form">
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Enter username" name="userToBlock" [(ngModel)]="userToBlock">
+                </mat-form-field>
+                <button mat-raised-button color="accent" (click)="onAddToBlockedClicked()">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </form>
+            <ul>
+                <li *ngFor="let blockedUser of blockedUsers">{{blockedUser}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

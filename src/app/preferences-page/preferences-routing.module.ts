@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 
+import { BlockedComponent } from './blocked/blocked.component';
 import { DeactivateComponent } from './deactivate/deactivate.component';
 import { EmailComponent } from './email/email.component';
 import { OptionsComponent } from './options/options.component';
@@ -17,7 +18,7 @@ const routes: Route[] = [
             { path: 'apps', pathMatch: 'full', component: OptionsComponent },
             { path: 'rss-feeds', pathMatch: 'full', component: OptionsComponent },
             { path: 'friends', pathMatch: 'full', component: OptionsComponent },
-            { path: 'blocked', pathMatch: 'full', component: OptionsComponent },
+            { path: 'blocked', pathMatch: 'full', component: BlockedComponent },
             { path: 'email', pathMatch: 'full', component: EmailComponent },
             { path: 'password', pathMatch: 'full', component: PasswordComponent },
             { path: 'deactivate', pathMatch: 'full', component: DeactivateComponent }
