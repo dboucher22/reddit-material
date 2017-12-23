@@ -2,17 +2,6 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import { LayoutService } from '../layout/layout.service';
-import { CommunitiesService } from '../services/communities.service';
-
-interface Submission {
-    id: number;
-    title: string;
-    imageUrl: string;
-    thumbnailUrl: string;
-    user: string;
-    community: string;
-    timeString: string;
-}
 
 @Component({
     selector: 'app-home-page',
@@ -21,15 +10,10 @@ interface Submission {
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePageComponent implements OnInit {
-    result: Observable<any>;
-
     constructor(
-        private layoutService: LayoutService,
-        private communitiesService: CommunitiesService) { }
+        private layoutService: LayoutService) { }
 
     ngOnInit() {
-        // this.result = this.communitiesService.getAll();
-        // this.result.subscribe(item => console.log(item));
         this.layoutService.setToolbarSecondaryRowVisibleState$(true);
     }
 }

@@ -12,7 +12,6 @@ import { PreferencesPageModule } from './preferences-page/preferences-page.modul
 import { PreferencesRoutingModule } from './preferences-page/preferences-routing.module';
 import { RoutingModule } from './routing.module';
 import { SearchResultsPageModule } from './search-results-page/search-results-page.module';
-import { ServicesModule } from './services/services.module';
 
 @NgModule({
     declarations: [
@@ -28,8 +27,7 @@ import { ServicesModule } from './services/services.module';
         PreferencesPageModule,
         PreferencesRoutingModule,
         RoutingModule,
-        SearchResultsPageModule,
-        ServicesModule
+        SearchResultsPageModule
     ],
     providers: [
         { provide: APP_BASE_HREF, useValue: '/' }

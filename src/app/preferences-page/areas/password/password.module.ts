@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { MaterialModule } from '../../material.module';
-import { OptionsComponent } from './options.component';
+import { MaterialModule } from '../../../material.module';
+import { PasswordComponent } from './password.component';
 
 @NgModule({
     imports: [
@@ -11,6 +11,6 @@ import { OptionsComponent } from './options.component';
         MaterialModule,
         RouterModule
     ],
-    declarations: [OptionsComponent]
+    declarations: [PasswordComponent]
 })
-export class PrefsOptionsModule { }
+export class PrefsPasswordModule { }

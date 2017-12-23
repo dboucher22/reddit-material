@@ -16,7 +16,7 @@ export class BlockedComponent implements OnInit {
 
     onAddToBlockedClicked() {
         if (this.userToBlock && this.userToBlock.length) {
-            this.blockedUsers.push(this.userToBlock);
+            this.blockedUsers.unshift(this.userToBlock);
             this.userToBlock = null;
         }
     }

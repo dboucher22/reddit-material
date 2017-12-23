@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 
-import { BlockedComponent } from './blocked/blocked.component';
-import { DeactivateComponent } from './deactivate/deactivate.component';
-import { EmailComponent } from './email/email.component';
-import { FriendsComponent } from './friends/friends.component';
-import { ManageAppsComponent } from './manage-apps/manage-apps.component';
-import { OptionsComponent } from './options/options.component';
-import { PasswordComponent } from './password/password.component';
+import { BlockedComponent } from './areas/blocked/blocked.component';
+import { DeactivateComponent } from './areas/deactivate/deactivate.component';
+import { EmailComponent } from './areas/email/email.component';
+import { FriendsComponent } from './areas/friends/friends.component';
+import { ManageAppsComponent } from './areas/manage-apps/manage-apps.component';
+import { OptionsComponent } from './areas/options/options.component';
+import { PasswordComponent } from './areas/password/password.component';
 import { PreferencesPageComponent } from './preferences-page.component';
-import { RssFeedsComponent } from './rss-feeds/rss-feeds.component';
+import { RssFeedsComponent } from './areas/rss-feeds/rss-feeds.component';
 
 const routes: Route[] = [
     {

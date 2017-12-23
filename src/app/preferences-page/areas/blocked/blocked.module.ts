@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { MaterialModule } from '../../material.module';
-import { RssFeedsComponent } from './rss-feeds.component';
+import { MaterialModule } from '../../../material.module';
+import { BlockedComponent } from './blocked.component';
+
 
 @NgModule({
     imports: [
@@ -13,6 +14,6 @@ import { RssFeedsComponent } from './rss-feeds.component';
         MaterialModule,
         RouterModule
     ],
-    declarations: [RssFeedsComponent]
+    declarations: [BlockedComponent]
 })
-export class PrefsRssFeedsModule { }
+export class PrefsBlockedModule { }

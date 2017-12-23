@@ -7,7 +7,12 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { SearchResultsPageComponent } from './search-results-page/search-results-page.component';
 
 const routes: Route[] = [
-    { path: '', component: HomePageComponent },
+    {
+        path: '', component: HomePageComponent, children: [
+            { path: 'hot', component: HomePageComponent },
+            { path: 'new', component: HomePageComponent }
+        ]
+    },
     { path: 'login', component: LoginPageComponent },
     {
         path: 'search', children: [
