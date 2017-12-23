@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MaterialModule } from '../../material.module';
+import { MaterialModule } from '../../../material.module';
 import { BlockedComponent } from './blocked.component';
 
 describe('BlockedComponent', () => {

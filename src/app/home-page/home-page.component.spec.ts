@@ -2,7 +2,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LayoutService } from '../layout/layout.service';
-import { CommunitiesService } from '../services/communities.service';
 import { HomePageComponent } from './home-page.component';
 
 describe('HomePageComponent', () => {
@@ -14,8 +13,7 @@ describe('HomePageComponent', () => {
             imports: [HttpClientModule],
             declarations: [HomePageComponent],
             providers: [
-                LayoutService,
-                CommunitiesService
+                LayoutService
             ]
         })
             .compileComponents();
